@@ -1526,12 +1526,11 @@ function onSelectOutcome(section,outcome) {
     //
 
     function selectFromGallery() {
-        navigator.camera.getPicture( captureSuccess, function() { console.log("FAIL"); }, { correctOrientation: true, quality: 50, destinationType: navigator.camera.DestinationType.FILE_URI, sourceType: navigator.camera.PictureSourceType.SAVEDPHOTOALBUM });
+        navigator.camera.getPicture( captureSuccess, function() { console.log("FAIL"); }, { correctOrientation: true, quality: 50, destinationType: Camera.DestinationType.FILE_URI, sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM });
     }
 
     function other() {
-        navigator.camera.getPicture( captureSuccess, function() { console.log("FAIL"); }, { correctOrientation: true, quality: 50, destinationType: navigator.camera.DestinationType.FILE_URI, sourceType: navigator.Camera.PictureSourceType.CAMERA });
-    }
+		navigator.camera.getPicture(captureSuccess, function() {}, { quality: 50, correctOrientation: true, destinationType: Camera.DestinationType.FILE_URI });  }
 </script>
 
 <div data-role="collapsible" data-collapsed = "true" data-theme = "b">
